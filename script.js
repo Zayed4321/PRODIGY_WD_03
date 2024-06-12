@@ -31,9 +31,9 @@ function handleClick(event) {
         setTimeout(() => alert(`${currentPlayer} wins!`), 10);
     } else if (boardState.every(cell => cell !== '')) {
         setTimeout(() => alert('It\'s a draw!'), 10);
+    } else {
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     }
-
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 }
 
 function checkWinner() {
